@@ -22,7 +22,13 @@
       <div class="col-md-2">
         <div class="well">
           <h5>Test Subject ID No.:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <!-- <select id="selDataset" onchange="optionChanged()"> -->
+            <select id="selDataset" onchange="optionChanged(this.value)">
+              <option value="9999">Select an ID</option>
+            <option value="0">ID: 940</option>
+            <option value="1">ID 941</option>
+            <option value="2">ID 943</option>
+          </select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -33,6 +39,9 @@
             <p id="age"></p>
             <p id="gen"></p>
             <p id="loc"></p>
+            <p id="eth"></p>
+            <p id="bb"></p>
+            <p id="wf"></p>
           </div>
         </div>
       </div>
