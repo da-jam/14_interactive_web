@@ -17,8 +17,8 @@ labelst.push(text);
 values = data.samples[1].sample_values.slice(0,9);
 labels = labelst;
 text = data.samples[1].otu_labels.slice(0,9);
-console.log(values);
-console.log(labels);
+// console.log(values);
+// console.log(labels);
 
 // bar 
 let trace1 = {
@@ -68,8 +68,22 @@ let layout1 = {
 }
 
 Plotly.newPlot("bubble", traceData1, layout1);
+// end of bubble
 
+// metadata info
+m_id = "ID: "+data.metadata[1].id;
+// console.log(m_id);
+m_age = "Age: "+data.metadata[1].age;
+m_eth = data.metadata[1].ethnicity;
+m_gen = "Gender: "+data.metadata[1].gender;
+m_loc = "Location: "+data.metadata[1].location;
+m_bb = data.metadata[1].bbtype;
+m_wf = data.metadata[1].wfreq;
 
+document.getElementById("id").innerHTML = m_id;
+document.getElementById("age").innerHTML = m_age;
+document.getElementById("gen").innerHTML = m_gen;
+document.getElementById("loc").innerHTML = m_loc;
 
 
 //end of then 
